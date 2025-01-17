@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Version  1.1.2      alpha beta TPC Module</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="QIcon::ThemeIcon::EditSelectAll"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="0">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="baseSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QTextBrowser" name="textBrowser_Log">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionFolderOpen"/>
+    <addaction name="actionFileSave"/>
+   </widget>
+   <widget class="QMenu" name="menuSocket">
+    <property name="title">
+     <string>Socket</string>
+    </property>
+    <addaction name="actionSocketConfigurations"/>
+    <addaction name="actionSocketConnect"/>
+    <addaction name="separator"/>
+    <addaction name="actionBaseline"/>
+    <addaction name="actionTrigger"/>
+   </widget>
+   <widget class="QMenu" name="menuExtract">
+    <property name="title">
+     <string>Extract</string>
+    </property>
+    <addaction name="actionExtractDat2Root"/>
+    <addaction name="actionExtractWriteThresholdFile"/>
+    <addaction name="actionWriteFilterFile"/>
+    <addaction name="actionExtractBaseline"/>
+    <addaction name="actionExtractGetWholeEvent"/>
+   </widget>
+   <widget class="QMenu" name="menuDraw">
+    <property name="title">
+     <string>Draw</string>
+    </property>
+    <addaction name="actionDrawSeveralWaves"/>
+    <addaction name="actionDrawSigmaOfBaseline"/>
+    <addaction name="actionDrawChannelWaves"/>
+    <addaction name="actionDrawEventWaves"/>
+    <addaction name="actionDrawMap"/>
+    <addaction name="actionDrawTrack"/>
+    <addaction name="actionDrawSpectrum"/>
+    <addaction name="actionDrawTest"/>
+   </widget>
+   <widget class="QMenu" name="menuMiscellaneous">
+    <property name="title">
+     <string>Miscellaneous</string>
+    </property>
+    <addaction name="actionMiscSetup"/>
+    <addaction name="actionHV_Calculator"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSocket"/>
+   <addaction name="menuExtract"/>
+   <addaction name="menuDraw"/>
+   <addaction name="menuMiscellaneous"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionFileOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSocketConnect">
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionExtractDat2Root">
+   <property name="text">
+    <string>Dat2Root</string>
+   </property>
+  </action>
+  <action name="actionExtractWriteThresholdFile">
+   <property name="text">
+    <string>WriteThresholdFile</string>
+   </property>
+  </action>
+  <action name="actionExtractBaseline">
+   <property name="text">
+    <string>ExtractBaseline</string>
+   </property>
+  </action>
+  <action name="actionExtractGetWholeEvent">
+   <property name="text">
+    <string>GetWholeEvent</string>
+   </property>
+  </action>
+  <action name="actionDrawSeveralWaves">
+   <property name="text">
+    <string>DrawSeveralWaves</string>
+   </property>
+  </action>
+  <action name="actionDrawSigmaOfBaseline">
+   <property name="text">
+    <string>DrawSigmaOfBaseline</string>
+   </property>
+  </action>
+  <action name="actionSocketConfigurations">
+   <property name="text">
+    <string>Configurations</string>
+   </property>
+  </action>
+  <action name="actionMiscTestMode">
+   <property name="text">
+    <string>TestMode</string>
+   </property>
+  </action>
+  <action name="actionMiscFEBInvert">
+   <property name="text">
+    <string>FEBInvert</string>
+   </property>
+  </action>
+  <action name="actionFileSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionDrawChannelWaves">
+   <property name="text">
+    <string>DrawChannelWaves</string>
+   </property>
+  </action>
+  <action name="actionMiscSetup">
+   <property name="text">
+    <string>Setup</string>
+   </property>
+  </action>
+  <action name="actionDrawEventWaves">
+   <property name="text">
+    <string>DrawEventWaves</string>
+   </property>
+  </action>
+  <action name="actionBaseline">
+   <property name="text">
+    <string>Baseline</string>
+   </property>
+  </action>
+  <action name="actionTrigger">
+   <property name="text">
+    <string>Trigger</string>
+   </property>
+  </action>
+  <action name="actionWriteFilterFile">
+   <property name="text">
+    <string>WriteFilterFile</string>
+   </property>
+  </action>
+  <action name="actionHV_Calculator">
+   <property name="text">
+    <string>HV Calculator</string>
+   </property>
+  </action>
+  <action name="actionDrawMap">
+   <property name="text">
+    <string>DrawMap</string>
+   </property>
+  </action>
+  <action name="actionDrawTrack">
+   <property name="text">
+    <string>DrawTrack</string>
+   </property>
+  </action>
+  <action name="actionDrawSpectrum">
+   <property name="text">
+    <string>DrawSpectrum</string>
+   </property>
+  </action>
+  <action name="actionDrawTest">
+   <property name="text">
+    <string>DrawTest</string>
+   </property>
+  </action>
+  <action name="actionFolderOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionprint">
+   <property name="text">
+    <string>print</string>
+   </property>
+  </action>
+  <action name="printLogAction">
+   <property name="text">
+    <string>print</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
